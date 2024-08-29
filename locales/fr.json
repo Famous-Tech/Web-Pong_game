@@ -1,0 +1,8 @@
+{
+    "menu": {
+        "title": "Jeu de Pong",
+        "solo": "Solo",
+        "multi": "Multijoueur",
+        "training": "Entraînement"
+    }
+}
