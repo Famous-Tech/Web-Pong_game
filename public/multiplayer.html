@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pong Game - Multijoueur</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="menu">
+        <button id="createGameButton">Créer une partie</button>
+        <div>
+            <input type="text" id="joinGameInput" placeholder="Entrez le code de la partie">
+            <button id="joinGameButton">Rejoindre une partie</button>
+        </div>
+    </div>
+    <div id="gameContainer" style="display: none;">
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        <div id="scoreBoard">
+            <div id="player1Score">0</div>
+            <div id="player2Score">0</div>
+        </div>
+        <div id="livesBoard">
+            <div id="player1Lives">5</div>
+            <div id="player2Lives">5</div>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="game.js"></script>
+    <script>
+        document.getElementById('createGameButton').addEventListener('click', () => {
+            socket.emit('createGame');
+        });
+        document.getElementById('joinGameButton').addEventListener('click', () => {
+            const code = document.getElementById('joinGameInput').value;
+            socket.emit('joinGame', code);
+        });
+        socket.on('gameCreated', (code) => {
+            alert(`Partie créée avec le code: ${code}`);
+            document.getElementById('menu').style.display = 'none';
+            document.getElementById('gameContainer').style.display = 'flex';
+        });
+        socket.on('gameJoined', () => {
+            document.getElementById('menu').style.display = 'none';
+            document.getElementById('gameContainer').style.display = 'flex';
+        });
+        setInterval(update, 1000 / 120);
+    </script>
+</body>
+</html>
