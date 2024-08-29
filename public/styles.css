@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+#menu {
+    text-align: center;
+    width: 100%;
+}
+
+#menu h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+#menu button {
+    font-size: 1.5em;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#menu button:hover {
+    background-color: #45a049;
+}
+
+#multiMenu {
+    display: none;
+    margin-top: 20px;
+}
+
+#multiMenu input {
+    font-size: 1.2em;
+    padding: 10px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+#multiMenu button {
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #008CBA;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#multiMenu button:hover {
+    background-color: #007B9A;
+}
+
+#gameContainer {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#gameCanvas {
+    width: 100%;
+    height: auto;
+    max-width: 800px;
+    border: 2px solid white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#scoreBoard, #livesBoard {
+    display: flex;
+    justify-content: space-around;
+    width: 800px;
+    margin-top: 10px;
+    font-size: 1.5em;
+    text-shadow: 1px 1px 2px #000000;
+}
