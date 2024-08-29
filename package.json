@@ -1,0 +1,16 @@
+{
+  "name": "pong-game",
+  "version": "1.0.0",
+  "description": "A Pong game built with Node.js, Express, and Socket.IO",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^4.0.1",
+    "howler": "^2.2.3"
+  },
+  "author": "FAMOUS-TECH",
+  "license": "MIT"
+}
