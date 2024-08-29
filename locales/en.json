@@ -1,0 +1,8 @@
+{
+    "menu": {
+        "title": "Pong Game",
+        "solo": "Solo",
+        "multi": "Multiplayer",
+        "training": "Training"
+    }
+}
