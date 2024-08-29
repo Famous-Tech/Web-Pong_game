@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pong Game - Entraînement</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="gameContainer">
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        <div id="scoreBoard">
+            <div id="player1Score">0</div>
+            <div id="player2Score">0</div>
+        </div>
+        <div id="livesBoard">
+            <div id="player1Lives">5</div>
+            <div id="player2Lives">5</div>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="game.js"></script>
+    <script>
+        let trainingMode = true;
+        let hardMode = false;
+        setInterval(update, 1000 / 120);
+    </script>
+</body>
+</html>
